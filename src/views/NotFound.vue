@@ -1,0 +1,57 @@
+<template>
+  <div class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8">
+      <div class="text-center">
+        <!-- 404 Icon -->
+        <div class="mx-auto h-24 w-24 text-gray-400 dark:text-gray-600">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        
+        <!-- 404 Text -->
+        <h1 class="text-9xl font-bold text-gray-200 dark:text-gray-700">404</h1>
+        
+        <!-- Error Message -->
+        <h2 class="mt-6 text-3xl font-extrabold text-gray-900 dark:text-white">
+          Page not found
+        </h2>
+        
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+          Sorry, we couldn't find the page you're looking for.
+        </p>
+        
+        <!-- Action Buttons -->
+        <div class="mt-6 space-y-4">
+          <button 
+            @click="$router.push('/')"
+            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+          >
+            Go back home
+          </button>
+          
+          <button 
+            @click="$router.go(-1)"
+            class="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:border-gray-600 dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-offset-gray-800"
+          >
+            Go back
+          </button>
+        </div>
+        
+        <!-- Help Links -->
+        <div class="mt-8">
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Need help? 
+            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
+              Contact support
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+// No additional logic needed for this component
+</script> 
