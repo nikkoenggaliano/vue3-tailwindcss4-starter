@@ -116,6 +116,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
+  // history: createWebHistory('/vue3-tailwindcss4-starter/'),
   routes,
 })
 
