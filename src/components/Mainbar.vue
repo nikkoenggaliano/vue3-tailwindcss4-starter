@@ -21,22 +21,25 @@
       <!-- Header -->
       <header class="sticky top-0 z-20 bg-white shadow-sm transition-colors duration-200 dark:bg-gray-800 dark:shadow-gray-900/20">
         <div class="flex h-16 items-center justify-between px-6">
-          <!-- Mobile menu button -->
-          <button
-            @click="state.isSidebarOpen = !state.isSidebarOpen"
-            class="rounded-lg p-2 text-gray-500 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:hidden"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          <!-- Left side: Menu button and Page title -->
+          <div class="flex items-center gap-4">
+            <!-- Menu button - Always visible on desktop and mobile -->
+            <button
+              @click="state.isSidebarOpen = !state.isSidebarOpen"
+              class="rounded-lg p-2 text-gray-500 transition-colors duration-200 hover:bg-gray-100 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            
+            <!-- Page title -->
+            <h1 class="text-xl font-semibold text-gray-800 dark:text-white">
+              {{ currentPageTitle }}
+            </h1>
+          </div>
           
-          <!-- Page title -->
-          <h1 class="text-xl font-semibold text-gray-800 dark:text-white">
-            {{ currentPageTitle }}
-          </h1>
-          
-          <!-- User menu -->
+          <!-- Right side: User menu -->
           <div class="flex items-center gap-4">
             <!-- Notifications -->
             <div class="relative">

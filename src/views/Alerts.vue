@@ -353,6 +353,43 @@
         </div>
       </div>
 
+      <!-- Custom Alerts like SweetAlert -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Custom Alerts like SweetAlert</h2>
+        <div class="space-y-4">
+          <div class="flex flex-wrap gap-3">
+            <button 
+              @click="alertService.success('Success!', 'Operation completed successfully.')"
+              class="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+            >
+              Show Success Alert
+            </button>
+
+            <button
+              @click="alertService.error('Error!', 'Something went wrong. Please try again.')" 
+              class="px-4 py-2 bg-red-600 text-white text-sm font-medium rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+            >
+              Show Error Alert
+            </button>
+
+            <button
+              @click="alertService.warning('Warning!', 'Please review your input before proceeding.')"
+              class="px-4 py-2 bg-yellow-600 text-white text-sm font-medium rounded-md hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+            >
+              Show Warning Alert
+            </button>
+
+            <button
+              @click="alertService.info('Information', 'Here is some useful information.')"
+              class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+            >
+              Show Info Alert
+            </button>
+          </div>
+        </div>
+      </div>
+
+
       <!-- Alert with Links -->
       <div class="space-y-6">
         <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Alerts with Links</h2>
@@ -418,7 +455,13 @@
 
 <script setup>
 import LayoutWithMainbar from '../components/LayoutWithMainbar.vue';
+// import { Alert } from '../components/Alert.vue';
 import { ref } from 'vue';
+import alertService from '../services/alert';
+
+const alert = ref(null);
+
+// alertService 
 
 // Reactive state for interactive alerts
 const showToggleAlert = ref(true);
