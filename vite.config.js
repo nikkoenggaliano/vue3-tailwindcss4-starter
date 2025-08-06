@@ -13,6 +13,10 @@ export default defineConfig({
     tailwindcss(),
     // vueDevTools(),
   ],
+  base: '/vue3-tailwindcss4-starter/',
+  build: {
+    outDir: 'docs',
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
